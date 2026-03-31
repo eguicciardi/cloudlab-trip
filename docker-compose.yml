@@ -35,7 +35,8 @@ services:
       R2_BUCKET: ${R2_BUCKET}
       R2_PATH: ${R2_PATH}
     depends_on:
-      - trek
+      trek:
+        condition: service_healthy
     networks:
       - trek_net
 
