@@ -26,6 +26,7 @@ services:
     image: litestream/litestream
     container_name: cloudlab-trek-backup
     restart: unless-stopped
+    user: "1000:1000"
     command: replicate
     volumes:
       - cloudlab-trek-data:/data
